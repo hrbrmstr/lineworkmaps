@@ -5,7 +5,7 @@ I took a minimalist approach to the package in that I don't have every linework 
 
 Please file an issue if there is functionality you'd like to see that isn't included. The package is at a very early stage so almost no suggestion will be turned away!
 
-To get an idea of what you can do with these lineworks in R, head on over to [RPubs](http://rpubs.com/hrbrmstr/project-linework). (That needs to be rewritten to use this package but it should give you an idea of what can be done).
+To get an idea of what you can do with these lineworks in R, head on over to [RPubs](http://rpubs.com/hrbrmstr/project-linework). It has been updated to use this package.
 
 The following functions are implemented:
 
@@ -230,7 +230,7 @@ library(lineworkmaps)
 library(testthat)
 
 date()
-#> [1] "Tue Jul 21 11:32:33 2015"
+#> [1] "Tue Jul 21 12:40:47 2015"
 
 test_dir("tests/")
 #> testthat results ========================================================================================================
