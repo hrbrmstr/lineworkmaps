@@ -7,6 +7,8 @@ Please file an issue if there is functionality you'd like to see that isn't incl
 
 To get an idea of what you can do with these lineworks in R, head on over to [RPubs](http://rpubs.com/hrbrmstr/project-linework). It has been updated to use this package.
 
+The Project Linework shapefiles also work well [with Leaflet](http://rpubs.com/hrbrmstr/linework-leaflet).
+
 The following functions are implemented:
 
 -   `lineworks` : Return vector of available linework shapes and optionally print verbose description of shapfile data elements.
@@ -230,7 +232,7 @@ library(lineworkmaps)
 library(testthat)
 
 date()
-#> [1] "Tue Jul 21 12:40:47 2015"
+#> [1] "Tue Jul 21 13:26:44 2015"
 
 test_dir("tests/")
 #> testthat results ========================================================================================================
