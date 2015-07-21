@@ -1,5 +1,11 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-lineworkmaps is compilation of [Project Linework](http://projectlinework.org/) maps in `SpatialPolygonsDataFrame` and `ggplot2` fortified objects ready for mapping.
+lineworkmaps is compilation of [Project Linework](http://projectlinework.org/) maps in `SpatialPolygonsDataFrame` and `ggplot2` fortified objects ready for mapping, et al.
+
+I took a minimalist approach to the package in that I don't have every linework (the calligraphy one seemed less than useful) and the functions only work for Admin 0 & Admin 1 polygons.
+
+Please file an issue if there is functionality you'd like to see that isn't included. The package is at a very early stage so almost no suggestion will be turned away!
+
+To get an idea of what you can do with these lineworks in R, head on over to [RPubs](http://rpubs.com/hrbrmstr/project-linework). (That needs to be rewritten to use this package but it should give you an idea of what can be done).
 
 The following functions are implemented:
 
@@ -224,7 +230,7 @@ library(lineworkmaps)
 library(testthat)
 
 date()
-#> [1] "Mon Jul 20 23:37:52 2015"
+#> [1] "Tue Jul 21 11:32:33 2015"
 
 test_dir("tests/")
 #> testthat results ========================================================================================================
