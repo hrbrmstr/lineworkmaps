@@ -1,11 +1,14 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-[![Build Status](https://travis-ci.org/hrbrmstr/lineworkmaps.svg)](https://travis-ci.org/hrbrmstr/lineworkmaps) ![Project Status: Concept - Minimal or no implementation has been done yet.](http://www.repostatus.org/badges/0.1.0/concept.svg)](<http://www.repostatus.org/#concept>) [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/lineworkmaps)](http://cran.r-project.org/web/packages/lineworkmaps) ![downloads](http://cranlogs.r-pkg.org/badges/grand-total/lineworkmaps)
-
-lineworkmaps is ...
+lineworkmaps is compilation of [Project Linework](http://projectlinework.org/) maps in `SpatialPolygonsDataFrame` and `ggplot2` fortified objects ready for mapping.
 
 The following functions are implemented:
 
+-   `lineworks` : Return vector of available linework shapes and optionally print verbose description of shapfile data elements.
+-   `linework_map` : Retrieve a linework map as a regular or fortified `SpatialPolygonsDataFrame`
+
 The following data sets are included:
+
+-   `linework` : Project Linework spatial & fortified objects
 
 ### News
 
@@ -45,6 +48,7 @@ us <- wargames[wargames$iso_a2=="US" &
 
 ggplot(us) +
   geom_map(map=us, aes(x=long, y=lat, map_id=id)) +
+  coord_map(project="albers", lat0=37.5, lat1=29.5) +
   theme_map()
 ```
 
@@ -220,7 +224,7 @@ library(lineworkmaps)
 library(testthat)
 
 date()
-#> [1] "Mon Jul 20 23:30:33 2015"
+#> [1] "Mon Jul 20 23:37:52 2015"
 
 test_dir("tests/")
 #> testthat results ========================================================================================================

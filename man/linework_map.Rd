@@ -48,6 +48,7 @@ wargames <- linework_map("wargames", fortified=TRUE)
 us <- wargames[wargames$iso_a2=="US" & !wargames$code_hasc \%in\% c("US.HI", "US.AK"),]
 ggplot(us) +
   geom_map(map=us, aes(x=long, y=lat, map_id=id)) +
+  coord_map(project="albers", lat0=37.5, lat1=29.5) +
   theme_map()
 
 # fancier example
