@@ -9,8 +9,8 @@ linework_map(linework_set = "elmer_casual", admin_level = 1,
 }
 \arguments{
 \item{linework_set}{one of \code{"charmingly_inaccurate"}, \code{"elmer_casual"},
-\code{"geo_metro"}, \code{"moriarty"}, \code{"times_approximate"},
-\code{"twenty_seventy"}, \code{"wargames"}, \code{"weekend"}}
+\code{"geo_metro"}, \code{"moriarty_hand"}, \code{"times_approximate"},
+\code{"twenty_seventy"}, \code{"wargames"}, \code{"weekend_update"}}
 
 \item{admin_level}{either \code{0} or \code{1} for the shapefile admin level}
 

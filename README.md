@@ -20,7 +20,8 @@ The following data sets are included:
 
 ### News
 
--   Version 0.0.1.9000 : Added two new Project Linework map sets: Moriarty Hand and Weekend Update [[ref](http://www.projectlinework.org//2015/08/31/new_linework_sets.html)]
+-   Version 0.0.1.9001 : naming consistency
+-   Version 0.0.1.9000 : Added two new Project Linework map sets: Moriarty Hand and Weekend Update [[ref](http://www.projectlinework.org/2015/08/31/new_linework_sets.html)]
 -   Version 0.0.0.9000 released
 
 ### Installation
@@ -88,7 +89,7 @@ gg
 
 # new maps: moriarty hand & weekend update
 
-moriarty <- linework_map("moriarty", fortified=TRUE)
+moriarty <- linework_map("moriarty_hand", fortified=TRUE)
 
 us <- moriarty[substring(moriarty$ISO_3166_2, 1, 2) =="US" & 
                !(moriarty$ISO_3166_2 %in% c("US-AK", "US-HI")),]
@@ -109,7 +110,7 @@ gg
 ``` r
 
 
-moriarty <- linework_map("moriarty", admin_level=0, fortified=FALSE)
+moriarty <- linework_map("moriarty_hand", admin_level=0, fortified=FALSE)
 moriarty <- subset(moriarty, region_un=="Africa")
 moriarty <- fortify(moriarty)
 #> Regions defined for each Polygons
@@ -129,7 +130,7 @@ gg
 
 ``` r
 
-weekend <- linework_map("weekend", admin_level=0, fortified=TRUE)
+weekend <- linework_map("weekend_update", admin_level=0, fortified=TRUE)
 weekend <- subset(weekend, Country != "United States")
 
 gg <- ggplot()
@@ -199,7 +200,7 @@ lineworks(verbose=TRUE)
 #>  $ NAME     : chr  "Nunavut" "Northwest Territories" "Yukon" "Alaska" ...
 #>  $ COUNTRY  : chr  "CA" "CA" "CA" "US" ...
 #> 
-#> moriarty - admin0
+#> moriarty_hand - admin0
 #> 
 #> 'data.frame':    221 obs. of  24 variables:
 #>  $ Name      : chr  "Canada" "United States of America" "Antarctica" "South Georgia and South Sandwich Islands" ...
@@ -227,7 +228,7 @@ lineworks(verbose=TRUE)
 #>  $ region_un : chr  "Americas" "Americas" "Antarctica" "Seven seas (open ocean)" ...
 #>  $ subregion : chr  "Northern America" "Northern America" "Antarctica" "Seven seas (open ocean)" ...
 #> 
-#> moriarty - admin1
+#> moriarty_hand - admin1
 #> 
 #> 'data.frame':    64 obs. of  6 variables:
 #>  $ Name      : chr  "Hawaii" "Florida" "Louisiana" "Georgia" ...
@@ -322,14 +323,14 @@ lineworks(verbose=TRUE)
 #>  $ postal    : chr  "KN" "TB" "GR" "PU" ...
 #>  $ admin     : chr  "Russia" "Mexico" "Mexico" "Mexico" ...
 #> 
-#> weekend - admin0
+#> weekend_update - admin0
 #> 
 #> 'data.frame':    80 obs. of  3 variables:
 #>  $ Color  : int  1 2 3 2 1 4 1 2 3 3 ...
 #>  $ Country: chr  "United States" "United States" "United States" "United States" ...
 #>  $ State  : chr  "Washington" "Oregon" "Idaho" "Montana" ...
-#> [1] "charmingly_inaccurate" "elmer_casual"          "geo_metro"             "moriarty"             
-#> [5] "times_approximate"     "twenty_seventy"        "wargames"              "weekend"
+#> [1] "charmingly_inaccurate" "elmer_casual"          "geo_metro"             "moriarty_hand"        
+#> [5] "times_approximate"     "twenty_seventy"        "wargames"              "weekend_update"
 ```
 
 ### Test Results
@@ -339,7 +340,7 @@ library(lineworkmaps)
 library(testthat)
 
 date()
-#> [1] "Mon Aug 31 21:00:26 2015"
+#> [1] "Mon Aug 31 21:16:02 2015"
 
 test_dir("tests/")
 #> testthat results ========================================================================================================

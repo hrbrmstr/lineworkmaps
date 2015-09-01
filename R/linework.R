@@ -7,8 +7,8 @@
 #' visually-interesting alternatives."}
 #'
 #' @param linework_set one of \code{"charmingly_inaccurate"}, \code{"elmer_casual"},
-#'        \code{"geo_metro"}, \code{"moriarty"}, \code{"times_approximate"},
-#'        \code{"twenty_seventy"}, \code{"wargames"}, \code{"weekend"}
+#'        \code{"geo_metro"}, \code{"moriarty_hand"}, \code{"times_approximate"},
+#'        \code{"twenty_seventy"}, \code{"wargames"}, \code{"weekend_update"}
 #' @param admin_level either \code{0} or \code{1} for the shapefile admin level
 #' @param fortified \code{TRUE} if the function should return a "fortified"
 #'        object (i.e. ready for use with \code{ggplot})
@@ -56,8 +56,8 @@ linework_map <- function(linework_set="elmer_casual",
 
   if (!linework_set %in% c("charmingly_inaccurate", "elmer_casual",
                            "geo_metro", "times_approximate",
-                           "twenty_seventy", "wargames", "moriarty",
-                           "weekend")) {
+                           "twenty_seventy", "wargames", "moriarty_hand",
+                           "weekend_update")) {
     stop("Invalid 'linework_set' specified", call.=FALSE)
   }
 
@@ -65,7 +65,7 @@ linework_map <- function(linework_set="elmer_casual",
     stop("'admin_level' must be either 0 or 1", call.=FALSE)
   }
 
-  if ((admin_level == 1) & (linework_set %in% c("weekend"))) {
+  if ((admin_level == 1) & (linework_set %in% c("weekend_update"))) {
     stop(sprintf("'%s' does not have admin 1 maps", linework_set), call.=FALSE)
   }
 
@@ -92,7 +92,7 @@ lineworks <- function(verbose=FALSE) {
   if (verbose) {
     for (x in sort(names(linework))) {
       admins <- c("admin0", "admin1")
-      if (x %in% c("weekend")) admins <- c("admin0")
+      if (x %in% c("weekend_update")) admins <- c("admin0")
       for (a in admins) {
         cat(sprintf("\n%s - %s\n\n", x, a))
         (str(linework[[x]][[a]]@data))

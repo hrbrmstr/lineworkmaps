@@ -35,7 +35,8 @@ The following data sets are included:
 
 ### News
 
-- Version 0.0.1.9000 : Added two new Project Linework map sets: Moriarty Hand and Weekend Update [[ref](http://www.projectlinework.org//2015/08/31/new_linework_sets.html)]
+- Version 0.0.1.9001 : naming consistency
+- Version 0.0.1.9000 : Added two new Project Linework map sets: Moriarty Hand and Weekend Update [[ref](http://www.projectlinework.org/2015/08/31/new_linework_sets.html)]
 - Version 0.0.0.9000 released
 
 ### Installation
@@ -91,7 +92,7 @@ gg
 
 # new maps: moriarty hand & weekend update
 
-moriarty <- linework_map("moriarty", fortified=TRUE)
+moriarty <- linework_map("moriarty_hand", fortified=TRUE)
 
 us <- moriarty[substring(moriarty$ISO_3166_2, 1, 2) =="US" & 
                !(moriarty$ISO_3166_2 %in% c("US-AK", "US-HI")),]
@@ -107,7 +108,7 @@ gg <- gg + theme(plot.title=element_text(size=16))
 gg
 
 
-moriarty <- linework_map("moriarty", admin_level=0, fortified=FALSE)
+moriarty <- linework_map("moriarty_hand", admin_level=0, fortified=FALSE)
 moriarty <- subset(moriarty, region_un=="Africa")
 moriarty <- fortify(moriarty)
 
@@ -121,7 +122,7 @@ gg <- gg + theme_map()
 gg <- gg + theme(plot.title=element_text(size=16))
 gg
 
-weekend <- linework_map("weekend", admin_level=0, fortified=TRUE)
+weekend <- linework_map("weekend_update", admin_level=0, fortified=TRUE)
 weekend <- subset(weekend, Country != "United States")
 
 gg <- ggplot()
