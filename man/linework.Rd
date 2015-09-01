@@ -4,7 +4,7 @@
 \name{linework}
 \alias{linework}
 \title{Project Linework spatial & fortified objects}
-\format{A list with six named objects and 24 named nested objects}
+\format{A list with eight named objects and 30 named nested objects}
 \usage{
 data(linework)
 }
@@ -12,7 +12,7 @@ data(linework)
 Project Linework spatial & fortified objects
 }
 \note{
-Last updated 2015-07-20.
+Last updated 2015-08-31.
 }
 \keyword{datasets}
 

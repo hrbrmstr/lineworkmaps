@@ -7,9 +7,11 @@
 #' \item \emph{Elmer Casual} - Marty Elmer
 #' \item \emph{Charmingly Inaccurate} - Daniel P Huffman
 #' \item \emph{Geo Metro}- Daniel P Huffman
+#' \item \emph{Moriarty Hand}- Dylan Moriarty
 #' \item \emph{Times Approximate} - Daniel P Huffman
 #' \item \emph{Twenty Seventy} - Marty Elmer
 #' \item \emph{Wargames} - Daniel P Huffman
+#' \item \emph{Weekend Update} - Jonah Adkins
 #' }
 #'
 #' @name lineworkmaps

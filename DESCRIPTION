@@ -2,7 +2,7 @@ Package: lineworkmaps
 Title: Making Project Linework Maps Available in R
 Description: A compilation of Project Linework <http://projectlinework.org/> maps in
        SpatialPolygonsDataFrame and ggplot2 fortified objects ready for mapping.
-Version: 0.0.0.9000
+Version: 0.0.1.9000
 Authors@R: c(person("Bob", "Rudis", email = "bob@rudis.net", role = c("aut", "cre")))
 Depends: R (>= 3.0.0)
 License: MIT + file LICENSE
